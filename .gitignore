@@ -1,0 +1,10 @@
+# Machine-local state, never part of the snapshot
+auth.json
+trust.json
+sessions/
+run-history.jsonl
+memory/
+
+# Editor and OS noise
+.DS_Store
+*.swp

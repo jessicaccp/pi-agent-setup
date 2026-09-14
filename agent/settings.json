@@ -1,0 +1,42 @@
+{
+  "theme": "dark",
+  "packages": [
+    "npm:pi-rtk-optimizer",
+    "npm:pi-subagents",
+    "npm:pi-memory",
+    "npm:pi-deepseek-search",
+    "npm:pi-web-access",
+    "npm:@alexanderfortin/pi-deepseek-usage"
+  ],
+  "defaultProvider": "deepseek",
+  "defaultModel": "deepseek-v4-flash",
+  "defaultThinkingLevel": "high",
+  "compaction": {
+    "enabled": true,
+    "reserveTokens": 16384,
+    "keepRecentTokens": 24000
+  },
+  "subagents": {
+    "defaultThinking": "low",
+    "agentOverrides": {
+      "scout": {
+        "thinking": "low"
+      },
+      "delegate": {
+        "thinking": "low"
+      },
+      "researcher": {
+        "thinking": "low"
+      },
+      "worker": {
+        "thinking": "low"
+      },
+      "reviewer": {
+        "thinking": "high"
+      },
+      "oracle": {
+        "thinking": "high"
+      }
+    }
+  }
+}
